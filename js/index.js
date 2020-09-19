@@ -18,20 +18,30 @@ toggle.addEventListener('click', function(){
     const sectionText = document.querySelector('#home');
     const aboutText = document.querySelector('#about');
     const typeText = document.querySelector('#outer');
+    const portFolioText = document.querySelector('#portfolioSection');
+    const descriptionText = document.querySelector('#para');
     if(count===0){
         body.style.backgroundColor = '#121212';
-        sectionText.style.color = 'white';
-        aboutText.style.color = 'white';
-        typeText.style.color = 'white';
-        toggle.style.color = 'white';
+        if(sectionText!=null){
+            sectionText.style.color = 'white';
+            aboutText.style.color = 'white';
+            typeText.style.color = 'white';
+            toggle.style.color = 'white';
+        }
+        (portFolioText!=null)?(portFolioText.style.color = 'white'):('');
+        (descriptionText!=null)?(descriptionText.style.color = 'white'):('');
         count++;
     }
     else{
         body.style.backgroundColor = 'white';
-        sectionText.style.color = 'black';
-        aboutText.style.color = 'black';
-        typeText.style.color = 'black';
-        toggle.style.color = 'black';
+        if(sectionText!=null){
+            sectionText.style.color = 'black';
+            aboutText.style.color = 'black';
+            typeText.style.color = 'black';
+            toggle.style.color = 'black';
+        }
+        (portFolioText!=null)?(portFolioText.style.color = 'black'):('');
+        (descriptionText!=null)?(descriptionText.style.color = 'black'):('');
         count--;
     }
 });
